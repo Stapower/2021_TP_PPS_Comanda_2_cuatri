@@ -1,0 +1,134 @@
+
+<ion-content [fullscreen]="true">
+
+	<app-spinner [shouldISpin]="spinner"></app-spinner>
+
+
+  <ion-item *ngIf="(orders.length == 0 && !spinner) 
+                    || (usuario[0].rol == 'Bartender' && !isThereAnyProductForBartender(orders))
+					|| (usuario[0].rol == 'Cocinero' && !isThereAnyProductForCocinero(orders)) 
+					|| (usuario[0].rol == 'Mozo' && !isThereAnyProductForMozo(orders))"color="medium">
+    <ion-title size="small" *ngIf="orders.length == 0 && !spinner"> No hay Ordenes Nuevas</ion-title>
+
+    <ion-title size="small" *ngIf="usuario[0].rol == 'Bartender' && !isThereAnyProductForBartender(orders)"> No hay Ordenes Nuevas</ion-title>
+    <ion-title size="small" *ngIf="usuario[0].rol == 'Cocinero' && !isThereAnyProductForCocinero(orders)"> No hay Ordenes Nuevas</ion-title>
+  
+    <ion-title size="small" *ngIf="usuario[0].rol == 'Mozo' && !isThereAnyProductForMozo(orders)"> No hay Productos para llevar </ion-title>  
+  </ion-item>
+
+
+<div *ngIf="isThereAnyProductForBartender(orders) || isThereAnyProductForCocinero(orders) || isThereAnyProductForMozo(orders) || (usuario[0].rol == 'Cliente' && orders.length)">
+  <ion-card *ngFor="let order of orders; let i = index" color="medium">
+
+	<div class="description">
+        <h3 class="status">Estado Orden: {{order.status}}</h3>
+    </div>
+
+
+    <div class="item" *ngFor="let product of order.products">
+      <!--div class="buttons">
+        <span class="delete-btn"></span>
+        <span class="like-btn"></span>
+      </!--div-->
+      
+    <div *ngIf="usuario[0].rol == 'Cliente' || (usuario[0].rol == 'Bartender' && product.category == 'bebida') || (usuario[0].rol == 'Cocinero' && product.category == 'comida') || (usuario[0].rol == 'Mozo' && (product.status == undefined || product.status == '' || product.status == 'Listo' || order.status == 'Nuevo'))">
+      <div class="image">
+        <img src="{{product.fotos[0]}}" alt="" />
+      </div>
+   
+      <div class="description">
+        <span>{{product.nombre}}</span>
+        <span>{{product.descripcion}}</span>
+        <h3 class="status">Estado: {{product.status}}</h3>
+
+        <span> Tiempo de Preparación:
+          <img style="width: 10%"src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/timer.png?alt=media&token=66b495cf-46cc-4104-83bb-018b8a8007f1">
+          {{product.tiempo * product.quantity}} M
+        </span>
+      </div>
+   
+      <div class="quantity">
+        <span>{{product.quantity}}</span>      
+      </div>
+   
+      <div class="total-price">${{product.price*product.quantity}}</div>
+    </div>
+
+    <div *ngIf="(usuario[0].rol == 'Bartender' && (product.status == '' || product.status == undefined)) && product.category == 'bebida'"  class="gif" (click)="prepararBebida(order, product)">
+      <span> Preparar bebida: </span>
+      <img class="roundImg" src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/bartender.gif?alt=media&token=7f0127ce-ee6d-4e2c-ad4c-b14f80dc94aa">
+    </div>
+      
+    <div *ngIf="(usuario[0].rol == 'Cocinero' && (product.status == '' || product.status == undefined)) && product.category == 'comida'"  class="gif" (click)="empezarCoccion(order, product)">
+      <span> Comenzar Coccion: </span>
+      <img class="roundImg" src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/cocinero.gif?alt=media&token=6dd7683a-d50b-428e-bcf0-314991fe4e78">
+    </div>
+
+    <div *ngIf="(usuario[0].rol == 'Bartender' && (product.status == 'Cocinando')) && product.category == 'bebida'"  class="gifTaco" (click)="terminarBebida(order, product)">
+      <span> bebida {{product.nombre}} lista: </span>
+      <img class="roundImg" src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/drinkReady.gif?alt=media&token=e0acd7ac-949e-4f09-80dc-127bd7e5967d">
+    </div>
+      
+    <div *ngIf="(usuario[0].rol == 'Cocinero' && (product.status == 'Cocinando')) && product.category == 'comida'"  class="gifTaco" (click)="terminarCoccion(order, product)">
+      <span> Comida {{product.nombre}} lista: </span>
+      <img class="roundImg" src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/FoodReady.gif?alt=media&token=907bad2c-b527-4f58-9353-e07b06f7cf0d">
+    </div>
+
+    <div *ngIf="(usuario[0].rol == 'Mozo' && (product.status == 'Listo'))"  class="gifMozo" (click)="productoRetiradoPorMozo(order, product)">
+      <span> Comida {{product.nombre}} lista para retirar: </span>
+      <img class="roundImg" src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/waitress.gif?alt=media&token=75c4b5b3-4988-47fd-8e6d-ab1bad006df5">
+    </div>
+
+    <!--div *ngIf="(usuario[0].rol == 'Mozo' && (product.status == 'Listo'))"  class="gifMozo" (click)="productoRetiradoPorMozo(order, product)">
+      <span> Comida {{product.nombre}} lista para retirar: </span>
+      <img class="roundImg" src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/waitress.gif?alt=media&token=75c4b5b3-4988-47fd-8e6d-ab1bad006df5">
+    </!--div-->
+
+
+    <div *ngIf="(usuario[0].rol == 'Cliente' && (product.status == 'Retirado') && product.category == 'comida')"  class="gifMozo" (click)="productoEnMesa(order, product)">
+      <span> Confirmar recepcion de {{product.nombre}}: </span>
+      <img class="roundImg" src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/eating.gif?alt=media&token=229a2df2-2e65-45ac-a806-a08c7e292e14">
+    </div>
+
+
+    <div *ngIf="(usuario[0].rol == 'Cliente' && (product.status == 'Retirado') && product.category == 'bebida')"  class="gifMozo" (click)="productoEnMesa(order, product)">
+      <span> Confirmar recepcion de {{product.nombre}}: </span>
+      <img class="roundImg" src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/beerReady.gif?alt=media&token=120c3d07-fd85-4876-9f26-93b203a25150">
+    </div>
+
+  </div>
+    
+    <!--ion-item color="medium">
+      <ion-label style="margin: center;"class="ionLabel">{{usuario.apellido}}, {{usuario.nombre}}
+      </ion-label>
+    </!--ion-item>
+
+    <ion-card-content color="medium">
+      <ion-label *ngIf="usuario.dni" style="margin: center;"class="ionLabel">con documento: {{usuario.dni}}
+      </ion-label>
+      <ion-img-- color="medium" style="width: 45%; height: 45%; margin: auto;" src={{usuario.foto}} ></ion-img-->
+
+
+      
+    <div *ngIf="(usuario[0].rol == 'Cliente' && (order.status == 'Servido'))" class="gifMozo" (click)="pagarOrden(order)">
+      <span> Pagar </span>
+      <img class="roundImg" src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/paying.gif?alt=media&token=842c246d-a352-43a2-8a01-030c267aa2be">
+    </div>
+      
+      
+        
+      
+      
+    <button *ngIf="(usuario[0].rol == 'Mozo' && order.status == 'Nuevo')" class="tick" (click)="aceptar(order)"></button>
+    <button *ngIf="(usuario[0].rol == 'Mozo' && order.status == 'Nuevo')" class="plus" (click)="denegar(order)"></button>
+
+
+        <!--button  class="tick" (click)="aceptar(order)"></!--button-->
+        <!--button *ngIf="(usuario[0].rol == 'Cocinero' && order.status == 'En Preparacion')" class="tick" (click)="aceptar(order)"></!--button-->
+        
+    <!--/ion-card-content-->
+
+  </ion-card>
+</div>
+
+</ion-content>

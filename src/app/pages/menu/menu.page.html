@@ -1,0 +1,92 @@
+<ion-content>
+	<app-spinner [shouldISpin]="spinner"></app-spinner>
+
+  <div class="shopping-cart">
+    <!-- Title -->
+    <div class="title">
+      Menú
+
+      <div class="fab-container">
+        <div class="fab fab-icon-holder">
+          <ion-img  (click)="crearOrder()" color="medium" style=" margin: auto;" src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/3229998.png?alt=media&token=b9bb1948-145a-47d8-8875-418c6e32e019"></ion-img>
+        </div>
+
+      </div>
+
+    </div>
+   
+    <!-- Product #1 -->
+    <div class="item" *ngFor="let product of productos">
+      <!--div class="buttons">
+        <span class="delete-btn"></span>
+        <span class="like-btn"></span>
+      </!--div-->
+   
+      <div class="image">
+        <img src="{{product.fotos[0]}}" alt="" />
+      </div>
+   
+      <div class="description">
+        <span>{{product.nombre}}</span>
+        <span>{{product.descripcion}}</span>
+        <span> Tiempo de Preparación:
+          <img style="width: 10%"src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/timer.png?alt=media&token=66b495cf-46cc-4104-83bb-018b8a8007f1">
+          {{product.tiempo}} M
+        </span>
+      </div>
+   
+      <div class="quantity">
+        <button class="plus-btn" type="button" name="button" (click)="lessQuantity(product)">
+          <svg width="10px" height="2px" viewBox="0 0 10 2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Ecommerce" transform="translate(-722.000000, -5892.000000)" fill="#86939E">
+                    <g id="Cart-#1-Copy" transform="translate(150.000000, 5772.000000)">
+                        <g id="#1" transform="translate(30.000000, 81.000000)">
+                            <g id="QTY" transform="translate(459.000000, 25.000000)">
+                                <rect id="Icon" x="83" y="14" width="10" height="2"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+        </button>
+        <input type="text" name="name" [(ngModel)]="product.quantity" [ngModel]="0" value="0">
+        
+        <button class="minus-btn" type="button" name="button" (click)="moreQuantity(product)">
+          <svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Ecommerce" transform="translate(-649.000000, -5888.000000)" fill="#86939E">
+                    <g id="Cart-#1-Copy" transform="translate(150.000000, 5772.000000)">
+                        <g id="#1" transform="translate(30.000000, 81.000000)">
+                            <g id="QTY" transform="translate(459.000000, 25.000000)">
+                                <path d="M14,14 L10,14 L10,16 L14,16 L14,20 L16,20 L16,16 L20,16 L20,14 L16,14 L16,10 L14,10 L14,14 Z" id="Icon"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+        </button>
+      </div>
+   
+      <div class="total-price">${{product.price}}</div>
+    </div>
+
+    <div class="box-colored">
+      <span class="always-price"> ${{totalPrice}} </span>
+    </div>
+
+    <div class="box-colored">
+      <span class="always-time">
+        <img style="width: 10%"src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/timer.png?alt=media&token=66b495cf-46cc-4104-83bb-018b8a8007f1"> {{totalTime != 0?totalTime:''}} </span>
+    </div>
+
+
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,57 @@
+<ion-content>
+
+
+  <br>
+
+  
+
+  <app-spinner [shouldISpin]=spinner></app-spinner>
+  <img *ngIf="mesa.foto === ''" class="clienteImage" src='https://www.nicepng.com/png/detail/185-1859053_dinner-png-download-people-sitting-at-table-png.png'>
+  <img *ngIf="mesa.foto !== ''" class="clienteImage" src="{{mesa.foto}}">
+  <!-- Input with placeholder -->
+  <ion-item color="medium">
+    <ion-label>Numero de Mesa</ion-label>
+    <ion-input placeholder="Numero" [(ngModel)]='mesa.numero' ></ion-input>
+  </ion-item>
+
+  <ion-item color="medium">
+    <ion-label>Comensales</ion-label>
+    <ion-input placeholder="Comensales" [(ngModel)]='mesa.comensales'></ion-input>
+  </ion-item>
+
+  <!--ion-item>
+    <ion-label>Tipo de Mesa</ion-label>
+    <ion-input placeholder="Tipo de Mesa" [(ngModel)]='mesa.tipo'></ion-input>
+  </!--ion-item-->
+
+  <ion-item color="medium">
+      <label for="rol">Tipo de Mesa</label>
+      <ion-select class="whiteColor" id="tipo" name="tipo" [(ngModel)]="mesa.tipo" placeholder="Tipo de Mesa">
+        <ion-select-option color="medium" value="{{rol}}" *ngFor="let rol of roles">{{rol}} </ion-select-option>
+      </ion-select>
+  </ion-item>
+
+  <ion-button color="medium" expand="full" (click)="registrar()"> Crear Mesa </ion-button>
+
+  <app-camara-de-fotos (click)="Spinnear()"(linkFoto)="asignarFoto($event)"> </app-camara-de-fotos>
+
+  <!-- *ngIf="createdCode" -->
+  <!--qr-code [data]="createdCode"> </!--qr-code-->
+
+  <ngx-qrcode class="QrImage" *ngIf="value != ''"
+    [elementType]="elementType" 
+    [value]="value"
+    cssClass="aclass"
+    errorCorrectionLevel="L">
+</ngx-qrcode>
+
+
+<img [src]="this.mesa.qr"
+     *ngIf="this.mesa.qr"
+     class="QrImage">
+
+	<div id="snackbar">{{Mensajes}}</div>
+
+
+
+</ion-content>

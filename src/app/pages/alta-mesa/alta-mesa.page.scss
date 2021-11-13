@@ -1,0 +1,59 @@
+#snackbar {
+	visibility: hidden;
+	min-width: 250px;
+	margin-left: -125px;
+   
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	padding: 16px;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	bottom: 30px;
+	font-size: 17px;
+  }
+  #snackbar.Ganador {
+	background-color: rgb(5, 159, 5);
+  }
+  #snackbar.Perdedor {
+	background-color: #FF0000;
+  }
+  #snackbar.show {
+	visibility: visible;
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+
+/*
+    width: 200px;
+	height: 300px;
+*/
+
+  .clienteImage{
+	width: 100%;
+    height: 20%;
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto;
+
+	min-width:50px; /* if load.gif have 50px width */
+    min-height:50px; /* if load.gif have 50px height */
+    background: url('../../../assets/spinner.gif') no-repeat;
+	//background: transparent url(path/to/loading.gif) no-repeat scroll center center;
+
+}
+
+
+.QrImage{
+	width: 60%;
+	height:60%;
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+ion-content{
+    --background: #fff url("https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80") no-repeat center center / cover;
+}

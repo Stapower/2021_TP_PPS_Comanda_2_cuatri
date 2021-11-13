@@ -1,0 +1,53 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-list-header>Lista de acciones</ion-list-header>
+          <ion-note>Resto StackOverFlow</ion-note>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item *ngIf="usuario.length == 0 " routerDirection="root" [routerLink]="['/folder/Log In']" lines="none"
+              detail="false" routerLinkActive="selected">
+              <ion-icon slot="start" name="log-in"></ion-icon>
+              <ion-label>Ingresar</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+
+
+            <ion-item
+              *ngIf="((usuario != null && usuario.length > 0 && usuario[0].rol == p.rol) || p.rol == '') && p.icon != ''"
+              routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+
+
+            <ion-item
+              *ngIf="((usuario != null && usuario.length > 0 && usuario[0].rol == p.rol) || p.rol == '') && p.img != '' && p.img !== undefined"
+              routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+              <img class="md hydrated icon-inner" style="max-width: 15%; margin-right: 12% " src="{{p.img}}">
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+
+
+          </ion-menu-toggle>
+        </ion-list>
+        <ion-list *ngIf="usuario != null && usuario.length > 0">
+          <app-log-out></app-log-out>
+        </ion-list>
+
+        <!--ion-list id="labels-list">
+          <ion-list-header>Labels</ion-list-header>
+
+          <ion-item *ngFor="let label of labels" lines="none">
+            <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+            <ion-label>{{ label }}</ion-label>
+          </ion-item>
+        </ion!--ion-list-->
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

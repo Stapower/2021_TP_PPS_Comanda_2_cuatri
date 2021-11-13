@@ -1,0 +1,77 @@
+ion-content {
+  --background: #751722;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  text-align: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: block;
+}
+
+.rotate-center {
+  margin-top: 200px;
+  -webkit-animation: rotate-center 2s ease-in-out both;
+  animation: rotate-center 2s ease-in-out both;
+}
+
+
+/**
+ * ----------------------------------------
+ * animation rotate-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0
+  }
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1
+  }
+}
+
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0
+  }
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1
+  }
+}
+
+.bottom {
+  margin-top: 40px;
+  -webkit-animation: text-focus-in 1s cubic-bezier(.55, .085, .68, .53) both;
+  animation: text-focus-in 1s cubic-bezier(.55, .085, .68, .53) both;
+}

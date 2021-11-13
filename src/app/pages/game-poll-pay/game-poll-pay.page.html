@@ -1,0 +1,26 @@
+<ion-content>
+	
+  
+  <div *ngIf="redirigir==''" class="split left" style="color: white;" (click)="selectTipo('Juegos')">
+		<div class="centered">
+			<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/games.png?alt=media&token=49095c62-c802-4580-a1d3-f03d0ee18a1c" alt="Avatar woman">
+			<h2>Juegos</h2>
+		</div>
+	</div>
+
+	<div *ngIf="redirigir==''" class="split right" style="color: white;" (click)="selectTipo('Menú')">
+		<div class="centered">
+			<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/4057741.png?alt=media&token=0537f82c-9b42-4b42-98b3-34e0baf546a2" alt="Avatar man">
+			<h2>Orden/Menú</h2>
+		</div>
+	</div>
+
+  <div *ngIf="redirigir==''" class="split centered middle" style="color: white;" (click)="selectTipo('Encuesta')">
+		<div class="centered">
+			<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/poll.png?alt=media&token=8e8fd239-f96e-4d1c-9886-579ec91705ea" alt="Avatar man">
+			<h2>Encuesta</h2>
+		</div>
+	</div>
+
+
+</ion-content>

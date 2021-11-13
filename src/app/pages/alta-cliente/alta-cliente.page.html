@@ -1,0 +1,70 @@
+<ion-content>
+
+
+  <br>
+
+	<div *ngIf="tipoDeLogin==''" class="split left" style="color: white;" (click)="selectTipo('normal')">
+		<div class="centered">
+			<img src="https://envri.eu/wp-content/uploads/2016/08/software-developer-copy.jpg" alt="Avatar woman">
+			<h2>Registrarse</h2>
+			<p>Con E-Mail.</p>
+		</div>
+	</div>
+
+	<div *ngIf="tipoDeLogin==''" class="split right" style="color: white;" (click)="selectTipo('anon')">
+		<div class="centered">
+			<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/kisspng-white-hat-security-hacker-anonymous-clip-art-anonymous.png?alt=media&token=028f989b-8829-4361-84cf-68ca5a3e23be" alt="Avatar man">
+			<h2>Registrarse</h2>
+			<p>Como Anónimo.</p>
+		</div>
+	</div>
+
+  
+  <div *ngIf=tipoDeLogin> 
+  <app-spinner [shouldISpin]=spinner></app-spinner>
+  <img *ngIf="usuario.foto === ''" class="clienteImage" src='https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/302-3026464_png-file-svg-login-member-icon-png-removebg-preview.png?alt=media&token=37ac03a0-9a44-4fea-8fb6-cde8fb4c69ba'>
+  <img *ngIf="usuario.foto !== ''" class="clienteImage" src="{{usuario.foto}}">
+  <!-- Input with placeholder -->
+  <ion-item color="medium">
+    <ion-label >Nombre</ion-label>
+    <ion-input  placeholder="Nombre" [(ngModel)]='usuario.nombre' ></ion-input>
+  </ion-item>
+
+  <ion-item color="medium" *ngIf = "tipoDeLogin!='anon'">
+    <ion-label >Apellido</ion-label>
+    <ion-input  placeholder="Apellido" [(ngModel)]='usuario.apellido'></ion-input>
+  </ion-item>
+
+
+  <ion-item color="medium" *ngIf = "tipoDeLogin!='anon'">
+    <ion-label >Email</ion-label>
+    <ion-input  placeholder="E-Mail" [(ngModel)]='usuario.mail'></ion-input>
+  </ion-item>
+
+  <ion-item color="medium" *ngIf = "tipoDeLogin!='anon'">
+    <ion-label > Contraseña</ion-label>
+    <ion-input  type="password" placeholder="Contraseña" [(ngModel)]='pass1'></ion-input>
+  </ion-item>
+
+  <ion-item color="medium" *ngIf = "tipoDeLogin!='anon'">
+    <ion-label >Repita Contraseña</ion-label>
+    <ion-input  type="password" placeholder="Repita Contraseña" [(ngModel)]='pass2'></ion-input>
+  </ion-item>
+
+
+  <ion-item  color="medium" *ngIf = "tipoDeLogin!='anon'">
+    <ion-label >DNI</ion-label>
+    <ion-input placeholder="DNI" [(ngModel)]='usuario.dni'></ion-input>
+  </ion-item>
+
+
+  <!--ion-button color="medium" style="width: 48%" (click)="registrar('anonimo')"> Anonimo </!--ion-button-->
+  <ion-button color="medium" expand="full" (click)="registrar('')"> Registrarse </ion-button>
+
+  <app-camara-de-fotos (linkFoto)="asignarFoto($event)"> </app-camara-de-fotos>
+  <app-scanner-dni *ngIf = "tipoDeLogin != 'anon'" class="clienteImage" (datosUsuario)="datosDeScanner($event)" [format]="'PDF_417'"></app-scanner-dni>
+
+	<div id="snackbar">{{Mensajes}}</div>
+
+</div>
+</ion-content>

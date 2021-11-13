@@ -1,0 +1,72 @@
+<ion-content>
+
+	<app-spinner [shouldISpin]="spinner"></app-spinner>
+
+
+	<div *ngIf="selectedOrder.length <= 0 && this.usuario[0].rol == 'Mozo'">
+		<ion-card *ngFor="let order of orders" (click)="seleccionDeMesa(order)">
+			<ion-item color="medium">
+				<ion-label style="margin: center;"class="ionLabel">Mesa {{order.table.numero}}
+				</ion-label>
+				<img class="mesa"
+				src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/mesa.png?alt=media&token=5bfbcf95-c74b-4fa3-a35a-119665768b97"/>
+			</ion-item>
+		</ion-card>
+	</div>
+
+
+
+	<div *ngIf="selectedOrder.length > 0" class="box">
+		<div class='inner'>
+			<h1>Mesa {{selectedOrder[0].table.numero}}</h1>
+			<div class='info clearfix'>
+
+				<div class='info clearfix' *ngFor="let product of selectedOrder[0].products; let i = index">
+
+					<div class='wp' style="width:40%">
+						<label *ngIf="i == 0">Producto</label>
+						<h2>{{product.nombre}}</h2>
+					</div>
+
+					<div class='wp' style="width:20%">
+						<label *ngIf="i == 0">Cantidad</label>
+						<h2>{{product.quantity}}</h2>
+					</div>
+
+					<div class='wp' style="width:40%">
+						<label *ngIf="i == 0">Precio</label>
+						<h2>{{product.price*product.quantity}}</h2>
+					</div>
+					
+					<br>
+
+				</div>
+			</div>
+
+			<div class='total clearfix'>
+				<h2>Descuento: <p>{{selectedOrder[0].descuento}}%</p></h2>
+			</div>
+
+			<div class='total clearfix'>
+				<h2>Propina: <p>{{selectedOrder[0].propina}}%</p></h2>
+			</div>
+
+			<div class='total clearfix'>
+				<h2>Total: <p>$ {{ calcularPropina(selectedOrder[0]) }}</p></h2>
+			</div>
+			
+		</div>
+	</div>
+
+
+
+	<div *ngIf="this.usuario[0].rol == 'Mozo' && selectedOrder.length > 0" class="roundImg" (click)=confirmarPago()>
+		<br>
+		<span> Confirmar pago </span>
+		<br>
+		<img class="imagePagar"
+				src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/1384405.png?alt=media&token=7c79d8f0-3da9-46ed-aff3-4ea774ee028a"/>
+	</div>
+
+
+</ion-content>

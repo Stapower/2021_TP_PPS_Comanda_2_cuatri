@@ -1,0 +1,73 @@
+.clienteImage{
+	width: 80%;
+	height:30%;
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+#snackbar {
+	visibility: hidden;
+	min-width: 250px;
+	margin-left: -125px;
+   
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	padding: 16px;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	bottom: 30px;
+	font-size: 17px;
+  }
+  #snackbar.Ganador {
+	background-color: rgb(5, 159, 5);
+  }
+  #snackbar.Perdedor {
+	background-color: #FF0000;
+  }
+  #snackbar.show {
+	visibility: visible;
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+
+  .split {
+	height: 100%;
+	width: 50%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	overflow-x: hidden;
+	padding-top: 20px;
+  }
+  
+  .left {
+	left: 0;
+	background-color: rgb(9, 1, 80);
+  }
+  
+  .right {
+	right: 0;
+	background-color: #181414;
+  }
+  
+  .centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+  }
+  
+  .centered img {
+	width: 150px;
+	border-radius: 50%;
+  }
+
+
+  ion-content{
+    --background: #fff url("https://cdn.wallpapersafari.com/59/23/G6dobw.jpg") no-repeat center center / cover;
+}

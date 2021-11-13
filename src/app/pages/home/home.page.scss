@@ -1,0 +1,33 @@
+
+#snackbar {
+	visibility: hidden;
+	min-width: 250px;
+	margin-left: -125px;
+   
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	padding: 16px;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	bottom: 30px;
+	font-size: 17px;
+  }
+  #snackbar.Ganador {
+	background-color: rgb(5, 159, 5);
+  }
+  #snackbar.Perdedor {
+	background-color: #FF0000;
+  }
+  #snackbar.show {
+	visibility: visible;
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+
+
+ion-content{
+    --background: #fff url("https://images3.alphacoders.com/914/thumb-1920-914159.png") no-repeat center center / cover;
+}

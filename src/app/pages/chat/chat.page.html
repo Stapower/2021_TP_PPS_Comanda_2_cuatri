@@ -1,0 +1,103 @@
+<ion-toolbar *ngIf="selectedOrder.length > 0">
+
+	<div class="top-bar ppsa">
+		<!--div class="avatar"><p>{{seccion}}
+</p></!--div-->
+		<br>
+		<img class="avatar"
+			src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/mesa.png?alt=media&token=5bfbcf95-c74b-4fa3-a35a-119665768b97" alt="Avatar man">
+		<p><b>
+			<div class="name" style="font-size: 30px"> Mesa {{selectedOrder[0].numero}}</div>
+		</b></p>
+	</div>
+
+</ion-toolbar>
+
+
+<ion-content>
+		
+
+
+  <div *ngIf="usuario[0].rol == 'Mozo' && selectedOrder.length <= 0 ">
+
+    <ion-card *ngFor="let table of mesaDeChat" (click)="seleccionDeChat(table)">
+		<ion-item color="medium">
+			<ion-label style="margin: center;"class="ionLabel">Mesa {{table.numero}}
+			</ion-label>
+			<img class="mesa"
+            src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/mesa.png?alt=media&token=5bfbcf95-c74b-4fa3-a35a-119665768b97"/>
+		</ion-item>
+    </ion-card>
+
+  </div>
+
+  <div class="chatbox" *ngIf="selectedOrder.length > 0">
+    <!--div class="top-bar" [ngClass]="{'ppsa': seccion === 'A', 'ppsb' : seccion === 'B' }">
+      <!--div class="avatar"><p>{{seccion}}
+          </p></div>
+      <br>
+      <img *ngIf="seccion=='A'" class="avatar"
+        src="https://envri.eu/wp-content/uploads/2016/08/software-developer-copy.jpg" alt="Avatar man">
+      <img *ngIf="seccion=='B'" class="avatar"
+        src="https://i.pinimg.com/originals/93/d3/e3/93d3e31639a4d07613de9dccdc8bd5e8.png" alt="Avatar man">
+
+      <p><b>
+        <div class="name" style="font-size: 30px">{{materia}}-4°{{seccion}}</div>
+      </b></p>
+    </div-->
+
+
+
+    <div class="middle" style="overflow-y:scroll;">
+      <div *ngIf="selectedOrder.length > 0">
+        <div *ngFor="let message of selectedOrder[0].chat">
+          <div *ngIf="message.mail != usuario[0].mail" class="incoming">
+            <div class="leftBubble">
+
+                <b *ngIf="message.mail !== usuario[0].mail" style="color:chocolate;">
+                  {{message.mail.split('@')[0]}}:
+                </b>
+
+              {{message.message}}
+
+              <br>
+              <div style=" font-size: 9px">
+                <img style="margin-right: 0; width:7%; height:7%"
+                  src="https://firebasestorage.googleapis.com/v0/b/pps1-251a8.appspot.com/o/assets%2Fanimales%2Fback-in-time.png?alt=media&token=5b3801d0-2884-4007-8517-b19931e75e06" />
+                {{message.time  | fecha}}
+              </div>
+            </div>
+            <br>
+          </div>
+
+          <div *ngIf="message.mail == usuario[0].mail" class="outgoing">
+            <div class="rightBubble" >
+
+              {{message.message}}
+
+              <div style=" font-size: 9px">
+                <img style="margin-right: 0; width:7%; height:7%;"
+                  src="https://firebasestorage.googleapis.com/v0/b/pps1-251a8.appspot.com/o/assets%2Fanimales%2Fback-in-time.png?alt=media&token=5b3801d0-2884-4007-8517-b19931e75e06" />
+                {{message.time  | fecha}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    
+    <div class="bottom-bar" [ngClass]="{'ppsa': seccion === 'A', 'ppsb' : seccion === 'B' }">
+      <div class="chat">
+        <input type="text" placeholder="Escribir mensaje..." [(ngModel)]="newMessage"
+          (keyup)="submitMessage($event)" maxlength="21"/>
+        <button type="submit" style="right:8%; width:9%" >
+          <img (click)="saveMessage()"
+            src="https://firebasestorage.googleapis.com/v0/b/pps1-251a8.appspot.com/o/assets%2Fanimales%2Fsend.png?alt=media&token=faa518a0-5764-48ff-a8b4-af049c8a8a6c" />
+        </button>
+      </div>
+    </div>
+  </div>
+</ion-content>

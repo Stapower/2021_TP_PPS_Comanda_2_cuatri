@@ -1,0 +1,13 @@
+
+
+
+<ion-label stacked class="labelClass">Haz click en la imagen para Escanear</ion-label>
+
+<div *ngIf="format == 'PDF_417'" (click)="escanear()">
+  <img src="https://bestof.nyc3.digitaloceanspaces.com/devsnap.me/sam/css-animation-barcode.gif">
+</div>
+
+
+<div *ngIf="format == 'QR_CODE'" (click)="escanearQr()">
+  <img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/output-onlinegiftools.gif?alt=media&token=064d0fde-4227-478a-a405-620ba028b9e1">
+</div>

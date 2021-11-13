@@ -1,0 +1,7 @@
+{
+  "name": "stackOverFlow",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

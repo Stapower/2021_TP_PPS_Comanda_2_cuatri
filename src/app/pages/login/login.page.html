@@ -1,0 +1,77 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content>
+  <br>
+  <br>
+  <br>
+
+  <ion-item color="medium" style="padding-top: 5%;">
+    <ion-label>Usuario</ion-label>
+    <ion-input required [(ngModel)]="mail" value="admin@gmail.com"></ion-input>
+  </ion-item>
+
+  <br>
+
+  <ion-item color="medium" style="padding-top: 5%;">
+    <ion-label>Contraseña</ion-label>
+    <ion-input type="password" required value="123456"> </ion-input>
+  </ion-item>
+
+  <br>
+
+
+  <ion-button color="medium" expand="full" (click)=logIn($event)> Entrar </ion-button>
+
+  <!--Necesitas <a href="/register">Crear cuenta</a> ? -->
+
+  <div color="medium" class="spin" *ngIf="loggingIn">
+    <ion-spinner name="bubbles"></ion-spinner>
+  </div>
+
+  <br>
+
+  <br>
+  <br>
+
+
+  <!--div-- class="wrapper">
+      <div class="icon facebook" (click)=usuario(mails[0])>
+        <div class="tooltip">Tomas</div>
+        <span><i class="fab fa-facebook-f"> <img src="https://firebasestorage.googleapis.com/v0/b/pps1-251a8.appspot.com/o/assets%2Fanimales%2Fwoman.png?alt=media&token=3c1e1d4c-35ac-44a0-9389-3155995b5691">
+         </i></span>
+      </div>
+      <div class="icon twitter" (click)=usuario(mails[1])>
+        <div class="tooltip">Asd</div>
+        <span><i class="fab fa-twitter">
+          <img src="https://firebasestorage.googleapis.com/v0/b/pps1-251a8.appspot.com/o/assets%2Fanimales%2Fman.png?alt=media&token=d73facd0-2148-4d2e-b040-82bb643209b0">
+        </i></span>
+      </div>
+      <div class="icon instagram" (click)=usuario(mails[2])>
+        <div class="tooltip">test123</div>
+        <span><i class="fab fa-instagram">
+          <img src="https://firebasestorage.googleapis.com/v0/b/pps1-251a8.appspot.com/o/assets%2Fanimales%2Fbussiness-man.png?alt=media&token=087bdc60-c6ac-4298-9d9b-4cd9df40002c">
+        </i></span>
+      </div>
+      <div class="icon youtube" (click)=usuario(mails[3])>
+        <div class="tooltip">admin</div>
+        <span ><i class="fab fa-youtube">
+          <img src="https://firebasestorage.googleapis.com/v0/b/pps1-251a8.appspot.com/o/assets%2Fanimales%2Fsuccess.png?alt=media&token=40977b8c-d6ae-4e8a-828a-85c3622983a2">
+        </i></span>
+      </div>
+    </!--div-->
+
+  <div class="wrapper">
+    <div class="icon twitter" *ngFor="let user of users" (click)=clieckOnLogInUser(user)>
+      <div class="tooltip">{{user.apellido}}, {{user.nombre}}</div>
+      <span><i class="fab fa-twitter">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/pps1-251a8.appspot.com/o/assets%2Fanimales%2Fsuccess.png?alt=media&token=40977b8c-d6ae-4e8a-828a-85c3622983a2">
+        </i></span>
+    </div>
+  </div>
+
+	<div id="snackbar">{{Mensajes}}</div>
+
+</ion-content>

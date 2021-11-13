@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ folder }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <app-login *ngIf="folder == 'Log In'"></app-login>
+  <app-alta-empleado *ngIf="folder == 'Alta Empleado'"></app-alta-empleado>
+  <app-alta-cliente (redirect)="redirectedFromHome($event)" *ngIf="folder == 'Alta Cliente'"></app-alta-cliente>
+  <app-alta-mesa *ngIf="folder == 'Alta Mesa'"></app-alta-mesa>
+  <app-listado-clientes *ngIf="folder == 'Listado Cliente'"></app-listado-clientes>
+  <app-home *ngIf="folder == 'Principal'" (redirectTo)="redirectedFromHome($event)"></app-home>
+  <app-alta-producto *ngIf="folder == 'Alta Producto'"></app-alta-producto>
+  <app-lista-espera-mesa *ngIf="folder == 'Lista de Espera'"></app-lista-espera-mesa>
+  <app-menu (redirect)="redirectedFromHome($event)" (showError)="MostarMensaje($event)" *ngIf="folder == 'Menú'"></app-menu>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ folder }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <app-chat *ngIf="folder == 'Chat'"></app-chat>
+  <app-lista-orders *ngIf="folder == 'Order'"></app-lista-orders>
+  <app-pagar *ngIf="folder == 'Pagar'"></app-pagar>
+  <app-game-poll-pay *ngIf="folder == 'Asignado'" (redirectTo)="redirectedFromHome($event)"></app-game-poll-pay>
+
+
+
+  <!--div id="container">
+    <strong class="capitalize">{{ folder }}</strong>
+    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </!--div-->
+
+	<div id="snackbar">{{Mensajes}}</div>
+
+</ion-content>

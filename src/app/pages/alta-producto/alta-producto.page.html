@@ -1,0 +1,82 @@
+<ion-content>
+
+
+  <br>
+
+
+
+  <app-spinner [shouldISpin]=spinner></app-spinner>
+
+  <!-- Input with placeholder -->
+  <ion-item color="medium">
+    <ion-label>Nombre del producto</ion-label>
+    <ion-input placeholder="Nombre" [(ngModel)]='producto.nombre'></ion-input>
+  </ion-item>
+
+  <ion-item color="medium">
+    <ion-label>Descripcion</ion-label>
+    <ion-input placeholder="Descripcion" [(ngModel)]='producto.descripcion'></ion-input>
+  </ion-item>
+
+  <ion-item color="medium">
+    <ion-label>Tiempo</ion-label>
+    <ion-input placeholder="Tiempo" [(ngModel)]='producto.tiempo'></ion-input>
+  </ion-item>
+
+  <ion-item color="medium">
+    <ion-label>Precio</ion-label>
+    <ion-input placeholder="Precio" [(ngModel)]='producto.price'></ion-input>
+  </ion-item>
+  <br>
+  <ion-item color="medium">
+      <div class="wrapper">
+        <div class="icon facebook" (click)="sexo($event, 'bebida') ">
+          <div class="tooltip">Bebida</div>
+          <span><i class="icon youtube" [ngStyle]="{'background-color' : isMen ? '#e1306c' : '#ffffff'}"> <img
+                src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/drink.png?alt=media&token=cd0479d3-bd1f-4b26-8108-19de332676e7">
+            </i></span>
+        </div>
+        <div class="icon twitter" (click)="sexo($event,'comida')">
+          <div class="tooltip">Comida</div>
+          <span><i class="icon twitter" [ngStyle]="{'background-color' : isGirl ? '#d800cd' : '#ffffff'}">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/food.png?alt=media&token=fa7c657e-6d13-4530-8fab-6d5f9ecb285d">
+            </i></span>
+        </div>
+      </div>
+      <span>Categoria</span>
+  </ion-item>
+  <br>
+  <ion-item color="medium">
+    <ion-label>Valoracion</ion-label>
+    <br>
+    <br>
+    <ion-icon slot="end" color="primary" *ngFor="let estrella of estrellas;let i = index"
+      [name]="valor <= i? 'star-outline' :'star' " (click)="review(i)">
+    </ion-icon>
+
+  </ion-item>
+
+  <!--   <img *ngIf="producto.fotos.length == 0" class="clienteImage"
+    src='https://www.nicepng.com/png/detail/185-1859053_dinner-png-download-people-sitting-at-table-png.png'> -->
+
+  <div *ngIf="producto.fotos.length > 0" class="imagenes">
+    <img class="clienteImage" *ngFor="let foto of producto.fotos" src="{{foto}}">
+  </div>
+
+  <app-camara-de-fotos (click)="Spinnear()" *ngIf="producto.fotos.length < 3" (linkFoto)="asignarFoto($event)"> </app-camara-de-fotos>
+
+  <ngx-qrcode class="QrImage" *ngIf="value != ''" [elementType]="elementType" [value]="value" cssClass="aclass"
+    errorCorrectionLevel="L">
+  </ngx-qrcode>
+
+  <ion-button color="medium" expand="full" (click)="registrar()"> Crear producto </ion-button>
+
+  <img [src]="this.producto.qr"
+     *ngIf="this.producto.qr"
+     class="QrImage">
+
+
+  <div id="snackbar">{{Mensajes}}</div>
+
+</ion-content>
