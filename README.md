@@ -10,6 +10,32 @@
 
 - **Sebastian Tomas Argañaras**
 
+
+## Tareas Completadas:
+
+A. Alta de dueño / supervisor **(Argañaras)**
+
+B- Alta de empleados **(Argañaras)**
+
+C- Alta de clientes **(Argañaras)**
+
+D- Alta de Mesa **(Argañaras)**
+
+E- Alta de productos **(Guinard)**
+
+F- Qr de ingreso al local **(Argañaras)**
+
+G- Qr de la mesa **(Argañaras)**
+
+L- Agregar un nuevo cliente registrado **(Argañaras)**
+
+M- Ingresar al local **(Argañaras)**
+
+N- Realizar pedidos (platos y bebidas) **(Argañaras)**
+
+O- Confirmar pedidos: **(Argañaras)**
+
+
 ## Tareas asignadas a cada integrante:
 
 ### Altas
@@ -48,6 +74,7 @@ O- Confirmar pedidos: **(Argañaras)**
 
 P- Generar reservas agendadas: **(Casas)**
 
+
 ### Push Notification
 Q- Agregar cliente nuevo **(Guinard)**
 
@@ -61,10 +88,12 @@ U- Confirmar realización del pedido (por parte del cocinero o bartender) **(Arg
 
 V- Generar reservas agendadas / Delivery **(Casas)**
 
+
 ### Delivery
 W- Realizar pedido con GPS o dirección. **(Guinard)**
 
 X- Mapa de ruta hasta el domicilio de entrega. **(Argañaras)**
+
 
 ### Juegos
 Y- Juego 10% de descuento. **(Casas)**
