@@ -9,6 +9,10 @@
                   color="danger">
         <ion-icon slot="icon-only" name="trash"></ion-icon>
       </ion-button>
+      <ion-button (click)="testHttpPush()"
+                  color="primary">
+        <ion-icon slot="icon-only" name="send"></ion-icon>
+      </ion-button>
     </ion-buttons>
 
 
@@ -45,11 +49,5 @@
     </ion-item>
 
   </ion-list>
-  <ion-buttons slot="end">
-    <ion-button (click)="testHttpPush()"
-                color="primary">
-      <ion-icon slot="icon-only" name="send"></ion-icon>
-    </ion-button>
-  </ion-buttons>
 
 </ion-content>

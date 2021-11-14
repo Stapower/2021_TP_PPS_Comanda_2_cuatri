@@ -37,9 +37,12 @@ export class PushService {
         return [...this.mensajes];
     }
 
-    async configuracionInicial(userId: string) {
+    async configuracionInicial(mail: string) {
 
         this.oneSignal.startInit('543f9b5d-712f-48c0-8257-f1245d324d7b', '343772762459');
+        console.log("userIdPushService", mail)
+        this.oneSignal.setExternalUserId(mail);
+
         this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
         this.oneSignal.handleNotificationReceived().subscribe((noti) => {
             // do something when notification is received
@@ -53,7 +56,6 @@ export class PushService {
             await this.notificacionRecibida(noti.notification);
         });
 
-        this.oneSignal.setExternalUserId(userId);
 
         // Obtener ID del suscriptor
         this.oneSignal.getIds().then(info => {

@@ -46,7 +46,7 @@ export class LoginPage implements OnInit {
 
         AuthServiceService.usuario.length = 0;
         AuthServiceService.usuario.push(this.user);
-        this.pushService.configuracionInicial(this.user);
+        this.pushService.configuracionInicial(this.user.mail);
         //this.router.navigate(['/tabs/tab1']);
 
         /*
