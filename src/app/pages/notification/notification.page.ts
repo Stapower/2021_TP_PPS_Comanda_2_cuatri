@@ -39,4 +39,7 @@ export class NotificationPage implements OnInit {
     console.log(this.mensajes);
   }
 
+  testHttpPush() {
+    this.pushService.sendPushHttp("Hola Test Titulo", "Cuerpo Push test", "metre@gmail.com");
+  }
 }

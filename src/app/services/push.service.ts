@@ -1,7 +1,11 @@
 import {Injectable, EventEmitter} from '@angular/core';
 import {OneSignal, OSNotification, OSNotificationPayload} from '@ionic-native/onesignal/ngx';
 import {Storage} from '@ionic/storage';
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 
+const headers = new HttpHeaders({
+    'Authorization': "Basic NTE4ZDRjNzAtMWUwMy00Mjc4LWIyZmEtZjE5Mzg3MTg0NzNk"
+});
 
 @Injectable({
     providedIn: 'root'
@@ -22,7 +26,8 @@ export class PushService {
 
 
     constructor(private oneSignal: OneSignal,
-                private storage: Storage) {
+                private storage: Storage,
+                private http: HttpClient) {
 
         this.cargarMensajes();
     }
@@ -105,4 +110,22 @@ export class PushService {
         this.guardarMensajes();
     }
 
+    sendPushHttp(header: string,content:string, idUser:string ) {
+        let data = {
+            app_id:"543f9b5d-712f-48c0-8257-f1245d324d7b",
+            include_external_user_ids:[idUser],
+            data:{"user_id":"PostmanTest"},
+            contents: {"en":"English message from postman to mesero","es":content},
+            headings: {"en":"English Title","es":header},
+            big_picture:"https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/iconNotification.png?alt=media&token=20f57305-5e48-470a-bd3f-96bf171e17b3"
+        };
+
+        this.http.post<any>('https://onesignal.com/api/v1/notifications', data, {headers}).subscribe(dataRec=>{
+            console.log(dataRec)
+        });
+    }
+
+    logOut() {
+        this.oneSignal.removeExternalUserId();
+    }
 }

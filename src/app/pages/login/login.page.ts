@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FirebaseAuth } from '../../services/firebase-auth';
 import { Router } from '@angular/router';
 import { AuthServiceService } from '../../services/auth-service.service';
+import {PushService} from "../../services/push.service";
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import { AuthServiceService } from '../../services/auth-service.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  constructor(public fireAuth: FirebaseAuth, private router: Router) {}
+  constructor(public fireAuth: FirebaseAuth, private router: Router,private pushService:PushService) {}
 
   public user;
 
@@ -45,6 +46,7 @@ export class LoginPage implements OnInit {
 
         AuthServiceService.usuario.length = 0;
         AuthServiceService.usuario.push(this.user);
+        this.pushService.configuracionInicial(this.user);
         //this.router.navigate(['/tabs/tab1']);
 
         /*

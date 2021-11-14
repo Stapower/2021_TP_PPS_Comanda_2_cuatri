@@ -24,7 +24,7 @@ import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { FechaPipe } from '../pipes/fecha.pipe';
 import { PagarPage } from '../pages/pagar/pagar.page';
 import { GamePollPayPage } from '../pages/game-poll-pay/game-poll-pay.page';
-import {NotificationPage} from "../pages/notification/notification.page";
+import {NotificationPageModule} from "../pages/notification/notification.module";
 @NgModule({
   imports: [
     CommonModule,
@@ -32,6 +32,7 @@ import {NotificationPage} from "../pages/notification/notification.page";
     IonicModule,
     FolderPageRoutingModule,
     NgxQRCodeModule,
+    NotificationPageModule,
   ],
   declarations: [
     FolderPage,
@@ -51,8 +52,7 @@ import {NotificationPage} from "../pages/notification/notification.page";
     FechaPipe,
     ListaOrdersPage,
     PagarPage,
-    GamePollPayPage,
-    NotificationPage
+    GamePollPayPage
   ],
 })
 export class FolderPageModule {}
