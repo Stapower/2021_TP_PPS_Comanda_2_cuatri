@@ -29,7 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { QrcodeComponent, NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { LogOutComponent } from './componentes/log-out/log-out.component';
 import { FechaPipe } from './pipes/fecha.pipe';
-
+import { OneSignal } from '@ionic-native/onesignal/ngx';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [AppComponent, LogOutComponent],
@@ -37,6 +38,7 @@ import { FechaPipe } from './pipes/fecha.pipe';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
+    IonicStorageModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig.firebase),
     AngularFireAuthModule,
@@ -54,6 +56,7 @@ import { FechaPipe } from './pipes/fecha.pipe';
     QrcodeComponent,
     LogOutComponent,
     QrCodeCallerService,
+    OneSignal,
     HttpClient
   ],
   bootstrap: [AppComponent],

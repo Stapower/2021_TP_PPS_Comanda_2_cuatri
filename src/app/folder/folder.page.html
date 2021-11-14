@@ -28,7 +28,7 @@
   <app-pagar *ngIf="folder == 'Pagar'"></app-pagar>
   <app-game-poll-pay *ngIf="folder == 'Asignado'" (redirectTo)="redirectedFromHome($event)"></app-game-poll-pay>
 
-
+  <app-notification *ngIf="folder == 'notification'"></app-notification>
 
   <!--div id="container">
     <strong class="capitalize">{{ folder }}</strong>

@@ -24,6 +24,7 @@ import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { FechaPipe } from '../pipes/fecha.pipe';
 import { PagarPage } from '../pages/pagar/pagar.page';
 import { GamePollPayPage } from '../pages/game-poll-pay/game-poll-pay.page';
+import {NotificationPage} from "../pages/notification/notification.page";
 @NgModule({
   imports: [
     CommonModule,
@@ -50,7 +51,8 @@ import { GamePollPayPage } from '../pages/game-poll-pay/game-poll-pay.page';
     FechaPipe,
     ListaOrdersPage,
     PagarPage,
-    GamePollPayPage
+    GamePollPayPage,
+    NotificationPage
   ],
 })
 export class FolderPageModule {}

@@ -54,7 +54,8 @@ const routes: Routes = [
       import('./pages/alta-producto/alta-producto.module').then(
         (m) => m.AltaProductoPageModule
       ),
-  },  {
+  },
+  {
     path: 'lista-espera-mesa',
     loadChildren: () => import('./pages/lista-espera-mesa/lista-espera-mesa.module').then( m => m.ListaEsperaMesaPageModule)
   },
@@ -77,6 +78,10 @@ const routes: Routes = [
   {
     path: 'game-poll-pay',
     loadChildren: () => import('./pages/game-poll-pay/game-poll-pay.module').then( m => m.GamePollPayPageModule)
+  },
+  {
+    path: 'notification',
+    loadChildren: () => import('./pages/notification/notification.module').then( m => m.NotificationPageModule)
   },
 
 

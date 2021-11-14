@@ -53,6 +53,12 @@ export class AppComponent {
       rol: '',
     },
     {
+      title: 'notification',
+      url: '/folder/notification',
+      icon: 'person-add',
+      rol: '',
+    },
+    {
       title: 'Listado Cliente',
       url: '/folder/Listado Cliente',
       icon: '',
