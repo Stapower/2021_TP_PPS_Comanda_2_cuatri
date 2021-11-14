@@ -115,8 +115,8 @@ export class PushService {
             app_id:"543f9b5d-712f-48c0-8257-f1245d324d7b",
             include_external_user_ids:[idUser],
             data:{"user_id":"PostmanTest"},
-            contents: {"en":"English message from postman to mesero","es":content},
-            headings: {"en":"English Title","es":header},
+            contents: {"en":"Default msj","es":content},
+            headings: {"en":"Default title","es":header},
             big_picture:"https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/iconNotification.png?alt=media&token=20f57305-5e48-470a-bd3f-96bf171e17b3"
         };
 
