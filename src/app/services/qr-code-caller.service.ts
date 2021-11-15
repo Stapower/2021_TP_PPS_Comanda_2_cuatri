@@ -9,8 +9,12 @@ export class QrCodeCallerService {
 
   constructor(public httpClient: HttpClient) {}
 
-  private url = "https://api.qr-code-generator.com/v1/create?access-token=HKOz-dE1gX6YtOM4mAPBU5-qqEc4UOmNBhsDXXFhcjoRv6BrdaNbKnSp1CoYhBiC";
-  private urlAndBodyGET = "https://api.qr-code-generator.com/v1/create?access-token=HKOz-dE1gX6YtOM4mAPBU5-qqEc4UOmNBhsDXXFhcjoRv6BrdaNbKnSp1CoYhBiC&frame_name=bottom-frame&qr_code_text={{qr_code_text}}&image_format=PNG&frame_color=#000000&frame_text_color=#ffffff&frame_icon_name=business&frame_text=Escaneame&foreground_color=#FF0000&background_color=#F8CE26&marker_left_inner_color=#FA593F&marker_left_outer_color=#FF8100&marker_right_inner_color=#FA593F&marker_right_outer_color=#FF8100&marker_bottom_inner_color=#FA593F&marker_bottom_outer_color=#FF8100&marker_left_template=version8&marker_right_template=version8&marker_bottom_template=version8&image_width=300";
+  //new api 15/11/21 - expires in 14 days
+  //SHIRRXh_Bc0tCLD4qidGeVVzdl6KO4QbK80wYvRAsJHeA60CHiEr_jtJAJaZPXDa
+
+  //old api - HKOz-dE1gX6YtOM4mAPBU5-qqEc4UOmNBhsDXXFhcjoRv6BrdaNbKnSp1CoYhBiC
+  private url = "https://api.qr-code-generator.com/v1/create?access-token=SHIRRXh_Bc0tCLD4qidGeVVzdl6KO4QbK80wYvRAsJHeA60CHiEr_jtJAJaZPXDa";
+  private urlAndBodyGET = "https://api.qr-code-generator.com/v1/create?access-token=SHIRRXh_Bc0tCLD4qidGeVVzdl6KO4QbK80wYvRAsJHeA60CHiEr_jtJAJaZPXDa&frame_name=bottom-frame&qr_code_text={{qr_code_text}}&image_format=PNG&frame_color=#000000&frame_text_color=#ffffff&frame_icon_name=business&frame_text=Escaneame&foreground_color=#FF0000&background_color=#F8CE26&marker_left_inner_color=#FA593F&marker_left_outer_color=#FF8100&marker_right_inner_color=#FA593F&marker_right_outer_color=#FF8100&marker_bottom_inner_color=#FA593F&marker_bottom_outer_color=#FF8100&marker_left_template=version8&marker_right_template=version8&marker_bottom_template=version8&image_width=300";
   private body = {
     frame_name: "bottom-frame",
     qr_code_text: "",
