@@ -12,7 +12,7 @@
 
 ## Tareas Completadas del 1~13:
 
-❏ 1- Crear un cliente nuevo (celular 1). **Argañaras**
+ 1- Crear un cliente nuevo (celular 1). **Argañaras**
 
 ❏ 2- Validar todos los campos. TODOS. Formatos, campos vacíos, tipos de datos, etc.
 
@@ -100,17 +100,20 @@ tipos de gráficos (torta, barra, lineal, etc.). - #TODO
 
 ❏ El detalle de la cuenta tendrá:
 ● Los pedidos realizados (con precios unitarios) con su respectivo importe. **Argañaras**
+
 ● Los descuentos correspondientes a los juegos* (si corresponde). **Argañaras** (esta la cuenta para que aplique el descuento, resta agregar el procentaje segun resolucion del juego)
+
 ● El grado de satisfacción del cliente (propina). **Argañaras** (esta la cuenta para que aplique la propina, resta agregar el procentaje segun propina del cliente)
+
 ● El TOTAL a abonar. **Argañaras**
 
 ❏ 13- El mozo confirma el pago y se libera la mesa. **Argañaras**
+
 ❏ Verificar que la mesa esté libre nuevamente (haciendo que el cliente vuelva a escanear el Qr de la
 mesa). **Argañaras**
+
 ❏ El cliente, escaneando el Qr de la lista de espera, podrá visualizar los resultados de las encuestas en
 distintos tipos de gráficos (torta, barra, lineal, etc.). **Argañaras** (Resta remover al Cliente una vez la mesa se haya asignado, mejorar manejo de Errores en ese modulo)
-
-
 
 
 
