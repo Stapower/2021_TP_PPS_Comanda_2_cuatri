@@ -13,36 +13,59 @@
 ## Tareas Completadas del 1~13:
 
 ❏ 1- Crear un cliente nuevo (celular 1). **Argañaras**
+
 ❏ 2- Validar todos los campos. TODOS. Formatos, campos vacíos, tipos de datos, etc.
+
 ❏ Verificar la lectura del código Qr del D.N.I. (varios formatos). **Argañaras**
+
 ❏ Verificar que el pre-registro se visualice en el listado de clientes pendientes de aprobación del dueño o
 supervisor. (push notification *A) **Argañaras**
+
 ❏ Verificar que no se pueda ingresar a la aplicación sin ser aprobado. Informar lo acontecido. **Argañaras**
+
 ❏ 3- El dueño o supervisor (celular 3) acepta o rechaza al cliente. **Argañaras**
+
 ❏ El cliente recibe un correo electrónico informado de la situación de su registro. **Yesid Dario Guinard**
+
 ❏ El correo electrónico debe ser automático y no se debe enviar con la cuenta personal de ninguno de los
 alumnos. (*B) **Yesid Dario Guinard**
+
 ❏ Verificar que el cliente pueda ingresar a la aplicación, si es aceptado. **Argañaras**
+
 ❏ Verificar que el cliente NO pueda ingresar a la aplicación, si NO es aceptado. Informar lo acontecido. **Argañaras**
+
 ❏ 4- Ingresa un cliente al local como anónimo (celular 2) y escanea el código Qr para solicitar mesa (lista de
 espera). **Argañaras**
+
 ❏ Verificar que aparezca en la lista de espera del Metre (celular 3). **Argañaras** (push notification*A) - Push notification por: **Yesid Dario Guinard**
+
 ❏ Verificar que no puede tomar una mesa sin estar previamente en la lista de espera. **Argañaras**
+
 ❏ 5- El Metre procede a la asignación de una mesa. El cliente escanea el código Qr de la mesa asignada (celular 2). **Argañaras** (Resta hacer validacion de la mesa que asigna el Metre)
+
 ❏ Al tener la mesa asignada, se verifica que el cliente no se pueda vincular a otra mesa. **Argañaras**
+
 ❏ Al tener la mesa asignada, se verifica que no se le pueda asignar dicha mesa a otro cliente. **Argañaras**
+
 ❏ 6- Al cargar el código Qr de la mesa (en el celular del cliente), se permite ver el listado de los productos
 (comidas, bebidas, postres) con tres imágenes por cada producto. **Argañaras** (Falta visualizar 3 imagenes, solo se esta mostrando 1.)
+
 ❏ Al tener la mesa asignada, se muestra el botón de “consulta al mozo”, que permite hacer una consulta
 rápida al mozo (con número de mesa y la consulta). **Argañaras**
-❏ Verificar que le llegue a todos los mozos la consulta realizada. (push notification*A) - TODO
-❏ El mozo responde la consulta. Se verifica en el cliente. **Argañaras**
-❏ 7- El cliente procede a realizar el pedido para todos los comensales de la mesa. **Argañaras**
-❏ Verificar que en todo momento esté visible el importe acumulado. **Argañaras**
-❏ Mostrar el tiempo estimado de realización del pedido (completo). **Argañaras**
-❏ 8- El mozo confirma el pedido (celular 3), este es derivado a los sectores correspondientes. **Argañaras**
-❏ Verificar que las distintas partes del pedido se visualicen en dichos sectores. (push notification*A) **Argañaras** Resta agregar Push Notification creado por **Yesid Dario Guinard**
 
+❏ Verificar que le llegue a todos los mozos la consulta realizada. (push notification*A) - TODO
+
+❏ El mozo responde la consulta. Se verifica en el cliente. **Argañaras**
+
+❏ 7- El cliente procede a realizar el pedido para todos los comensales de la mesa. **Argañaras**
+
+❏ Verificar que en todo momento esté visible el importe acumulado. **Argañaras**
+
+❏ Mostrar el tiempo estimado de realización del pedido (completo). **Argañaras**
+
+❏ 8- El mozo confirma el pedido (celular 3), este es derivado a los sectores correspondientes. **Argañaras**
+
+❏ Verificar que las distintas partes del pedido se visualicen en dichos sectores. (push notification*A) **Argañaras** Resta agregar Push Notification creado por **Yesid Dario Guinard**
 
 El cliente vuelve a escanear el código Qr de la mesa y podrá acceder a los juegos*, a la encuesta y al
 estado de su pedido. - TODO
@@ -52,20 +75,29 @@ entregue. **Argañaras**
 
 10- Verificar que cada parte del pedido se visualice en el listado de pedidos pendientes del mozo. (push
 notification*A) **Argañaras**
+
 ❏ El cliente verifica el cambio de estado en su pedido (escaneando el Qr de su mesa). **Argañaras**
+
 ❏ 10- El mozo entrega el pedido completo (los platos y bebidas). **Argañaras**
+
 ❏ El cliente confirma la recepción de su pedido. **Argañaras**
+
 ❏ El cliente verifica el cambio de estado en su pedido (escaneando el Qr de su mesa). **Argañaras**
+
 ❏ El cliente vuelve a escanear el código Qr de la mesa y podrá acceder a los juegos*, a la encuesta y a la
 opción de ‘pedir la cuenta’. **Argañaras** (Resta Juegos, y encuesta y redireccionamiento al leer QR)
 
 ❏ 11- El cliente accede a la encuesta, en dónde ingresará su opinión sobre diversos temas. - #TODO
+
 ❏ Verificar que sólo se pueda acceder una vez para poder agregar una encuesta nueva (una por estadía). - #TODO
+
 ❏ El cliente, escaneando el Qr de su mesa, podrá visualizar los resultados de las encuestas en distintos
 tipos de gráficos (torta, barra, lineal, etc.). - #TODO
 
 ❏ 12- El cliente solicita la cuenta. **Argañaras**
+
 ❏ Se habilita, mediante la lectura del código Qr correspondiente, el ingreso de la propina. - #TODO
+
 ❏ El detalle de la cuenta tendrá:
 ● Los pedidos realizados (con precios unitarios) con su respectivo importe. **Argañaras**
 ● Los descuentos correspondientes a los juegos* (si corresponde). **Argañaras** (esta la cuenta para que aplique el descuento, resta agregar el procentaje segun resolucion del juego)
