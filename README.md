@@ -51,7 +51,7 @@ espera). **Argañaras**
 - [x] Al tener la mesa asignada, se verifica que no se le pueda asignar dicha mesa a otro cliente. **Argañaras**
 
 - [x] 6- Al cargar el código Qr de la mesa (en el celular del cliente), se permite ver el listado de los productos (comidas, bebidas, postres) con tres imágenes por cada producto. **Argañaras** 
-- [ ] (Falta visualizar 3 imagenes, solo se esta mostrando 1.)
+- [x] (Falta visualizar 3 imagenes, solo se esta mostrando 1.) **Argañaras**
 
 
 - [x] Al tener la mesa asignada, se muestra el botón de “consulta al mozo”, que permite hacer una consulta rápida al mozo (con número de mesa y la consulta). **Argañaras**
