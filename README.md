@@ -12,9 +12,6 @@
 
 ## Tareas Completadas del 1~13:
 
-- [ ] #739
-
-
 - [x] Push notifications. **Yesid Dario Guinard**
 - [x] Envio de mail. **Yesid Dario Guinard**
 
