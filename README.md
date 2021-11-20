@@ -116,6 +116,12 @@ espera). **Argañaras**
 - [x] El cliente, escaneando el Qr de la lista de espera, podrá visualizar los resultados de las encuestas en distintos tipos de gráficos (torta, barra, lineal, etc.). **Argañaras** 
 - [ ] Falta remover al Cliente una vez la mesa se haya asignado, mejorar manejo de Errores en ese modulo y el modulo de encuestas
 
+- [x] 14- Alta de un nuevo plato, (con tres fotos) lo ingresa el Chef (celular 2). **Gustavo Federico Casas** 
+- [x] Se verifica la existencia en la carta por parte de un cliente (celular 1). **Argañaras**
+- [x] 15- Alta de nueva bebida, (con tres fotos) la ingresa el Bar Tender (celular 3). v
+- [x] Se verifica la existencia en la carta por parte de un cliente (celular 1). **Argañaras**
+- [x] 16- Alta de nueva mesa, (con foto) lo ingresa el supervisor o dueño (celular 1). **Argañaras**
+- [x] Se verifica la existencia de la nueva mesa. **Argañaras**
 
 
 ## Tareas Completadas:
