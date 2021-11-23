@@ -220,7 +220,7 @@ AA- Juego para un 20% de descuento. **(Argañaras)**
 
 ## SplashScreen
 
-<img src="https://github.com/gusfedec/2021_TP_PPS_Comanda_2_cuatri/blob/main/resources/splash.png" alt="Icono" width="500px" height="500px" />
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FSplash.gif?alt=media&token=cfbcc512-1fb7-476c-9f14-0a64ec45d841" alt="Icono" width="500px" height="500px" />
 
 ---------------------------------------------------------------------------------------------------
 
@@ -237,13 +237,77 @@ AA- Juego para un 20% de descuento. **(Argañaras)**
 <table><tr><td><img src="https://github.com/gusfedec/2021_TP_PPS_Comanda_2_cuatri/blob/main/capturas/AltaProducto.png" alt="Icono" width="300px" height="500px" /></td><td><img src="https://github.com/gusfedec/2021_TP_PPS_Comanda_2_cuatri/blob/main/capturas/Menu%20Dueno.png" alt="Icono" width="300px" height="500px" /></td></tr></table>
 
 ### Fecha 4 - 23/11
-<table>
-	<tr>
-		<td><img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2Flogin.png?alt=media&token=fe0849e9-30aa-44a0-85af-accef01a8322"
-				alt="Icono" width="300px" height="500px" /></td>
-		<td><img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FAccionesCliente.png?alt=media&token=fea3483c-908c-47d0-ae57-1ad566991c59"
-				alt="Icono" width="300px" height="500px" /></td>
-		<td><img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FCliente.mp4?alt=media&token=3868929e-10d1-4bff-92ca-0afe560ed17b"
-				alt="Icono" width="300px" height="500px" /></td>
-	</tr>
-</table>
+
+## Admin
+
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2Fadmin.gif?alt=media&token=be50c3e6-d858-47c2-9cb8-be819a15a998" alt="Icono" width="300px" height="500px">
+
+## Cliente
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2Fcliente.gif?alt=media&token=a3fa1303-bcba-4e81-ae83-ae35e39a52a3" alt="Icono" width="300px" height="500px">
+
+## Cocinero
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FcocineroApp.gif?alt=media&token=e2ac810d-ed83-4b88-b724-d1faa7d32993" alt="Icono" width="300px" height="500px">
+
+## Metre
+
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2Fmetre.gif?alt=media&token=ff475dfa-34be-4363-a246-7a9fbad3cf41" alt="Icono" width="300px" height="500px">
+
+## Mozo
+
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2Fmozo.gif?alt=media&token=a6e8906e-fade-4b43-8a1a-00ef84702a91" alt="Icono" width="300px" height="500px">
+
+---------------------------------------------------------------------------------------------------
+
+## Mensaje asignar Mesa
+
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FAsignarMesaApp.jpeg?alt=media&token=45821360-69bd-4bcd-839e-d1b73333a689" alt="Icono" width="300px" height="500px">
+
+## Formato Mensaje
+
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FMensajes.jpeg?alt=media&token=8d7eaf9c-48fe-4542-9433-e199f310e811" alt="Icono" width="300px" height="500px">
+
+## Chat
+
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FChatApp.jpeg?alt=media&token=34d4f568-7059-4ead-b9c3-0fad9698d23d" alt="Icono" width="300px" height="500px">
+
+## Encuesta resultados
+
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FEncuestaResultado.jpeg?alt=media&token=f233a443-65ab-4e28-ae2c-3f0b36c8303e" alt="Icono" width="300px" height="500px">
+
+## Lista de espera
+
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FListaDeEsperaApp.jpeg?alt=media&token=05592933-6e39-4eaa-a9ab-765e3f70e66e" alt="Icono" width="300px" height="500px">
+
+
+## Menú
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FMenuApp.jpeg?alt=media&token=26e0b1db-d95a-40a5-b414-3a29ae92bfbf" alt="Icono" width="300px" height="500px">
+
+## Mesa Asignada
+
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FMenuAsignado.jpeg?alt=media&token=d6a3e7af-1cfc-46c3-9115-36a9f129fd77" alt="Icono" width="300px" height="500px">
+
+
+---------------------------------------------------------------------------------------------------
+
+## Formato de QR.
+
+## QR Lista de Espera
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FQR%2FQRListaDeEspera.png?alt=media&token=94286658-fe34-40c5-b705-7941890e3607" alt="Icono" width="300px" height="500px">
+
+## QR Mesa 15
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FQR%2FQRMesa15.png?alt=media&token=0fda32ed-4825-47f9-b946-654fd679c9bf" alt="Icono" width="300px" height="500px">
+
+## QR Mesa 5
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FQR%2FQRMesa5.png?alt=media&token=fcaf0364-fe34-41fe-ba15-507e072fd46a" alt="Icono" width="300px" height="500px">
+
+## QR Mesa 8
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FQR%2FQRMesa8.png?alt=media&token=0c0c2a98-df7f-4232-b55d-3ca33d12bb5e" alt="Icono" width="300px" height="500px">
+
+## QR Propina 10%
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FQR%2FQRPropina30.png?alt=media&token=f2b0db0d-10bb-49bb-a7e5-016254b63575" alt="Icono" width="300px" height="500px">
+
+## QR Propina 20%
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FQR%2FQRPropina20.png?alt=media&token=8c25cc07-b701-4f5c-9baf-7e0ee33d05b1" alt="Icono" width="300px" height="500px">
+
+## QR Propina 30%
+<img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FQR%2FQRPropina30.png?alt=media&token=f2b0db0d-10bb-49bb-a7e5-016254b63575" alt="Icono" width="300px" height="500px">
