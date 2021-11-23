@@ -53,7 +53,7 @@ espera). **Argañaras**
 
 - [x] Al tener la mesa asignada, se muestra el botón de “consulta al mozo”, que permite hacer una consulta rápida al mozo (con número de mesa y la consulta). **Argañaras**
 
-- [ ] Verificar que le llegue a todos los mozos la consulta realizada. (push notification*A) - TODO
+- [x] Verificar que le llegue a todos los mozos la consulta realizada. (push notification*A) - TODO
 
 - [x] El mozo responde la consulta. Se verifica en el cliente. **Argañaras**
 
@@ -66,17 +66,17 @@ espera). **Argañaras**
 - [x] 8- El mozo confirma el pedido (celular 3), este es derivado a los sectores correspondientes. **Argañaras**
 
 - [x] Verificar que las distintas partes del pedido se visualicen en dichos sectores. (push notification*A) **Argañaras**
-- [ ]  Resta agregar Push Notification
+- [x]  Resta agregar Push Notification
 
-- [ ] El cliente vuelve a escanear el código Qr de la mesa y podrá acceder a los juegos*, a la encuesta y al estado de su pedido. - TODO
+- [x] El cliente vuelve a escanear el código Qr de la mesa y podrá acceder a los juegos*, a la encuesta y al estado de su pedido. - TODO
 
 - [x] 9- Cada sector realiza las tareas correspondientes (celular 1) y retornan los productos para que el mozo los entregue. **Argañaras**
 
 - [x] 10- Verificar que cada parte del pedido se visualice en el listado de pedidos pendientes del mozo. (push notification*A) **Argañaras**
-- [ ] Falta agregar el Push Notification
+- [x] Falta agregar el Push Notification
 
 - [x] El cliente verifica el cambio de estado en su pedido (escaneando el Qr de su mesa). **Argañaras**
-- [ ] El cliente puede ver siempre el estado del Pedido, pero no lo hace escaneando el QR, agregar esto.
+- [x] El cliente puede ver siempre el estado del Pedido, pero no lo hace escaneando el QR, agregar esto.
 
 - [x] 10- El mozo entrega el pedido completo (los platos y bebidas). **Argañaras**
 
@@ -85,17 +85,17 @@ espera). **Argañaras**
 - [x] El cliente verifica el cambio de estado en su pedido (escaneando el Qr de su mesa). **Argañaras**
 
 - [x] El cliente vuelve a escanear el código Qr de la mesa y podrá acceder a los juegos*, a la encuesta y a la opción de ‘pedir la cuenta’. **Argañaras** 
-- [ ] Falta Juegos, y encuesta y redireccionamiento al leer QR.
+- [x] Falta Juegos, y encuesta y redireccionamiento al leer QR.
 
-- [ ] 11- El cliente accede a la encuesta, en dónde ingresará su opinión sobre diversos temas.
+- [x] 11- El cliente accede a la encuesta, en dónde ingresará su opinión sobre diversos temas.
 
-- [ ] Verificar que sólo se pueda acceder una vez para poder agregar una encuesta nueva (una por estadía). - #TODO
+- [x] Verificar que sólo se pueda acceder una vez para poder agregar una encuesta nueva (una por estadía). - #TODO
 
-- [ ] El cliente, escaneando el Qr de su mesa, podrá visualizar los resultados de las encuestas en distintos tipos de gráficos (torta, barra, lineal, etc.). - #TODO
+- [x] El cliente, escaneando el Qr de su mesa, podrá visualizar los resultados de las encuestas en distintos tipos de gráficos (torta, barra, lineal, etc.). - #TODO
 
 - [x] 12- El cliente solicita la cuenta. **Argañaras**
 
-- [ ] Se habilita, mediante la lectura del código Qr correspondiente, el ingreso de la propina. - #TODO
+- [x] Se habilita, mediante la lectura del código Qr correspondiente, el ingreso de la propina. - #TODO
 
 - [x] El detalle de la cuenta tendrá:
 	● Los pedidos realizados (con precios unitarios) con su respectivo importe. **Argañaras**
@@ -111,7 +111,7 @@ espera). **Argañaras**
 - [x] Verificar que la mesa esté libre nuevamente (haciendo que el cliente vuelva a escanear el Qr de la mesa). **Argañaras**
 
 - [x] El cliente, escaneando el Qr de la lista de espera, podrá visualizar los resultados de las encuestas en distintos tipos de gráficos (torta, barra, lineal, etc.). **Argañaras** 
-- [ ] Falta remover al Cliente una vez la mesa se haya asignado, mejorar manejo de Errores en ese modulo y el modulo de encuestas
+- [x] Falta remover al Cliente una vez la mesa se haya asignado, mejorar manejo de Errores en ese modulo y el modulo de encuestas
 
 - [x] 14- Alta de un nuevo plato, (con tres fotos) lo ingresa el Chef (celular 2). **Gustavo Federico Casas** 
 - [x] Se verifica la existencia en la carta por parte de un cliente (celular 1). **Argañaras**
