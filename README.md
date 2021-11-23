@@ -236,3 +236,14 @@ AA- Juego para un 20% de descuento. **(Argañaras)**
 
 <table><tr><td><img src="https://github.com/gusfedec/2021_TP_PPS_Comanda_2_cuatri/blob/main/capturas/AltaProducto.png" alt="Icono" width="300px" height="500px" /></td><td><img src="https://github.com/gusfedec/2021_TP_PPS_Comanda_2_cuatri/blob/main/capturas/Menu%20Dueno.png" alt="Icono" width="300px" height="500px" /></td></tr></table>
 
+### Fecha 4 - 23/11
+<table>
+	<tr>
+		<td><img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2Flogin.png?alt=media&token=fe0849e9-30aa-44a0-85af-accef01a8322"
+				alt="Icono" width="300px" height="500px" /></td>
+		<td><img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FAccionesCliente.png?alt=media&token=fea3483c-908c-47d0-ae57-1ad566991c59"
+				alt="Icono" width="300px" height="500px" /></td>
+		<td><img src="https://firebasestorage.googleapis.com/v0/b/comanda-be3d2.appspot.com/o/App%2FCliente.mp4?alt=media&token=3868929e-10d1-4bff-92ca-0afe560ed17b"
+				alt="Icono" width="300px" height="500px" /></td>
+	</tr>
+</table>
