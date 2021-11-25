@@ -41,7 +41,7 @@ espera). **Argañaras**
 - [x] Verificar que no puede tomar una mesa sin estar previamente en la lista de espera. **Argañaras**
 
 - [x] 5- El Metre procede a la asignación de una mesa. El cliente escanea el código Qr de la mesa asignada (celular 2). **Argañaras** 
-- [ ] (Resta hacer validacion de la mesa que asigna el Metre)
+- [x] (Resta hacer validacion de la mesa que asigna el Metre)
 
 - [x] Al tener la mesa asignada, se verifica que el cliente no se pueda vincular a otra mesa. **Argañaras**
 
